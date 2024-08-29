@@ -8,17 +8,15 @@
 <body>
     <div style="text-align: center; margin-top: 50px;">
         <h1>How to Solve Arduino HC-05 Bluetooth Module Auto Disconnect Problem | ESP32 | Arduino UNO | Arduino Mega</h1>
-        <p>Arduino projects often requires Bluetooth modules like the HC-05 to enable wireless communication. However, a common issue many enthusiasts face is the module's tendency to disconnect automatically. This problem can be frustrating, especially when you're in the middle of an important project. In this article, we’ll explore the common causes of the auto-disconnect problem and provide a detailed solution to ensure a stable Bluetooth connection.
-
-Common Causes of Auto Disconnect Problem
+        <p>Arduino projects often requires Bluetooth modules like the HC-05 to enable wireless communication. However, a common issue many enthusiasts face is the module's tendency to disconnect automatically. This problem can be frustrating, especially when you're in the middle of an important project. In this article, we’ll explore the common causes of the auto-disconnect problem and provide a detailed solution to ensure a stable Bluetooth connection. Common Causes of Auto Disconnect Problem
 Before diving into the solution, it's important to understand the potential causes of the auto-disconnect issue:
-
+<br>
 Bad Connection: Poor connections between the Bluetooth module and the Arduino can lead to intermittent communication failures.
 Weak Wiring: Using thin or low-quality wires can result in inadequate signal transmission, causing the module to disconnect.
 Inadequate Power Supply***: This is the most critical factor. The HC-05 Bluetooth module requires more current than the Arduino's 5V power pin can supply. Relying solely on the Arduino for power often results in an unstable connection.
 The Importance of ***Adequate Power Supply***
 The HC-05 Bluetooth module typically needs a stable 3.6V to 6V power supply and draws more current than the Arduino's 5V pin can provide, especially when the module is actively communicating. If the power supply is insufficient, the module will frequently disconnect.
-
+<br>
 Why Arduino's 5V Pin is Inadequate
 Limited Current Supply: The Arduino's 5V pin can supply only a limited amount of current, which might not be enough for the HC-05 module, especially when other components are also drawing power.
 ***Voltage Drops***: Voltage drops can occur due to high current demand, leading to unstable operation of the Bluetooth module.
