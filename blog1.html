@@ -1,75 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Solve Arduino HC-05 Bluetooth Module Auto Disconnect Problem | ESP32 | Arduino UNO | Arduino Mega</title>
+    <style>
+        .content {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px; /* Adjust width as needed */
+        }
+
+        .code {
+            text-align: left;
+            white-space: pre; /* Preserve formatting for code */
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <div style="text-align: center; margin-top: 50px;">
-        <h1>How to Solve Arduino HC-05 Bluetooth Module Auto Disconnect Problem | ESP32 | Arduino UNO | Arduino Mega</h1>
+    <div class="content">
         <p>Arduino projects often require Bluetooth modules like the HC-05 to enable wireless communication. However, a common issue many enthusiasts face is the module's tendency to disconnect automatically. This problem can be frustrating, especially when you're in the middle of an important project. In this article, we’ll explore the common causes of the auto-disconnect problem and provide a detailed solution to ensure a stable Bluetooth connection.</p>
 
-<p><b>Common Causes of Auto Disconnect Problem</b></p>
-<p>Before diving into the solution, it's important to understand the potential causes of the auto-disconnect issue:</p>
-<ul>
-    <li><b>Bad Connection:</b> Poor connections between the Bluetooth module and the Arduino can lead to intermittent communication failures.</li>
-    <li><b>Weak Wiring:</b> Using thin or low-quality wires can result in inadequate signal transmission, causing the module to disconnect.</li>
-    <li><b>Inadequate Power Supply:</b> This is the most critical factor. The HC-05 Bluetooth module requires more current than the Arduino's 5V power pin can supply. Relying solely on the Arduino for power often results in an unstable connection.</li>
-</ul>
+        <p><b>Common Causes of Auto Disconnect Problem</b></p>
+        <p>Before diving into the solution, it's important to understand the potential causes of the auto-disconnect issue:</p>
+        <ul>
+            <li><b>Bad Connection:</b> Poor connections between the Bluetooth module and the Arduino can lead to intermittent communication failures.</li>
+            <li><b>Weak Wiring:</b> Using thin or low-quality wires can result in inadequate signal transmission, causing the module to disconnect.</li>
+            <li><b>Inadequate Power Supply:</b> This is the most critical factor. The HC-05 Bluetooth module requires more current than the Arduino's 5V power pin can supply. Relying solely on the Arduino for power often results in an unstable connection.</li>
+        </ul>
 
-<p><b>The Importance of Adequate Power Supply</b></p>
-<p>The HC-05 Bluetooth module typically needs a stable 3.6V to 6V power supply and draws more current than the Arduino's 5V pin can provide, especially when the module is actively communicating. If the power supply is insufficient, the module will frequently disconnect.</p>
+        <p><b>The Importance of Adequate Power Supply</b></p>
+        <p>The HC-05 Bluetooth module typically needs a stable 3.6V to 6V power supply and draws more current than the Arduino's 5V pin can provide, especially when the module is actively communicating. If the power supply is insufficient, the module will frequently disconnect.</p>
 
-<p><b>Why Arduino's 5V Pin is Inadequate</b></p>
-<ul>
-    <li><b>Limited Current Supply:</b> The Arduino's 5V pin can supply only a limited amount of current, which might not be enough for the HC-05 module, especially when other components are also drawing power.</li>
-    <li><b>Voltage Drops:</b> Voltage drops can occur due to high current demand, leading to unstable operation of the Bluetooth module.</li>
-</ul>
+        <p><b>Why Arduino's 5V Pin is Inadequate</b></p>
+        <ul>
+            <li><b>Limited Current Supply:</b> The Arduino's 5V pin can supply only a limited amount of current, which might not be enough for the HC-05 module, especially when other components are also drawing power.</li>
+            <li><b>Voltage Drops:</b> Voltage drops can occur due to high current demand, leading to unstable operation of the Bluetooth module.</li>
+        </ul>
 
-<p><b>Solution: Use an Independent Power Supply</b></p>
-<p>To ensure a stable connection, it is recommended to use an independent power supply dedicated to the Bluetooth module. Here’s a step-by-step guide to implement this solution:</p>
+        <p><b>Solution: Use an Independent Power Supply</b></p>
+        <p>To ensure a stable connection, it is recommended to use an independent power supply dedicated to the Bluetooth module. Here’s a step-by-step guide to implement this solution:</p>
 
-<p><b>Components Needed:</b></p>
-<ul>
-    <li>HC-05 Bluetooth module</li>
-    <li>External 5V power supply (such as a regulated power adapter or a battery pack with a voltage regulator)</li>
-    <li>Capacitors (optional but recommended for filtering noise)</li>
-    <li>Breadboard and jumper wires</li>
-</ul>
+        <p><b>Components Needed:</b></p>
+        <ul>
+            <li>HC-05 Bluetooth module</li>
+            <li>External 5V power supply (such as a regulated power adapter or a battery pack with a voltage regulator)</li>
+            <li>Capacitors (optional but recommended for filtering noise)</li>
+            <li>Breadboard and jumper wires</li>
+        </ul>
 
-<p><b>> Step-by-Step Guide</b></p>
+        <p><b>> Step-by-Step Guide</b></p>
 
-<p><b>Set Up the External Power Supply:</b></p>
-<ul>
-    <li>Obtain a regulated 5V power supply. This could be a USB power adapter, a battery pack with a voltage regulator, or any reliable 5V power source.</li>
-    <li>Ensure the power supply can provide sufficient current, typically at least 200mA to 500mA.</li>
-</ul>
+        <p><b>Set Up the External Power Supply:</b></p>
+        <ul>
+            <li>Obtain a regulated 5V power supply. This could be a USB power adapter, a battery pack with a voltage regulator, or any reliable 5V power source.</li>
+            <li>Ensure the power supply can provide sufficient current, typically at least 200mA to 500mA.</li>
+        </ul>
 
-<p><b>Connect the Power Supply to the HC-05 Module:</b></p>
-<ul>
-    <li>Connect the positive terminal of the power supply to the VCC pin of the HC-05 module.</li>
-    <li>Connect the ground (GND) of the power supply to the GND pin of the HC-05 module.</li>
-    <li>Optionally, place capacitors (e.g., 100μF and 0.1μF) between the VCC and GND pins of the HC-05 to filter out any noise and provide a stable voltage.</li>
-</ul>
+        <p><b>Connect the Power Supply to the HC-05 Module:</b></p>
+        <ul>
+            <li>Connect the positive terminal of the power supply to the VCC pin of the HC-05 module.</li>
+            <li>Connect the ground (GND) of the power supply to the GND pin of the HC-05 module.</li>
+            <li>Optionally, place capacitors (e.g., 100μF and 0.1μF) between the VCC and GND pins of the HC-05 to filter out any noise and provide a stable voltage.</li>
+        </ul>
 
-<p><b>Connect the HC-05 Module to Arduino for Communication:</b></p>
-<ul>
-    <li>Connect the TX pin of the HC-05 to the RX pin of the Arduino (digital pin 0).</li>
-    <li>Connect the RX pin of the HC-05 to the TX pin of the Arduino (digital pin 1) through a voltage divider (to reduce the Arduino’s 5V signal to 3.3V compatible with the HC-05’s RX pin).</li>
-</ul>
+        <p><b>Connect the HC-05 Module to Arduino for Communication:</b></p>
+        <ul>
+            <li>Connect the TX pin of the HC-05 to the RX pin of the Arduino (digital pin 0).</li>
+            <li>Connect the RX pin of the HC-05 to the TX pin of the Arduino (digital pin 1) through a voltage divider (to reduce the Arduino’s 5V signal to 3.3V compatible with the HC-05’s RX pin).</li>
+        </ul>
 
-<p><b>Verify the Connections:</b></p>
-<ul>
-    <li>Double-check all connections to ensure there are no loose wires or incorrect connections.</li>
-    <li>Power on the external supply and ensure the HC-05 module's LED is blinking, indicating it is powered and ready to pair.</li>
-</ul>
+        <p><b>Verify the Connections:</b></p>
+        <ul>
+            <li>Double-check all connections to ensure there are no loose wires or incorrect connections.</li>
+            <li>Power on the external supply and ensure the HC-05 module's LED is blinking, indicating it is powered and ready to pair.</li>
+        </ul>
 
-<p><b>Programming the Arduino:</b></p>
-<p>Upload your Arduino sketch that involves Bluetooth communication. Ensure you’ve set the correct baud rate for communication with the HC-05 (typically 9600 or 38400).</p>
+        <p><b>Programming the Arduino:</b></p>
+        <p>Upload your Arduino sketch that involves Bluetooth communication. Ensure you’ve set the correct baud rate for communication with the HC-05 (typically 9600 or 38400).</p>
 
-<p><b>Example Code</b></p>
-<pre>
+        <p><b>Example Code</b></p>
+        <pre class="code">
 #include &lt;SoftwareSerial.h&gt;
 
 SoftwareSerial BTSerial(10, 11); // RX, TX
@@ -88,21 +97,20 @@ void loop() {
     BTSerial.write(Serial.read());
   }
 }
-</pre>
+        </pre>
 
-<p><b>Troubleshooting Tips:</b></p>
-<ul>
-    <li>Check Connections: Ensure all wires are properly connected and the power supply is stable.</li>
-    <li>Use Quality Components: Avoid using thin wires or poor-quality connectors, as they can cause signal loss.</li>
-    <li>Monitor Power Supply: Use a multimeter to check the voltage and current being supplied to the HC-05 module.</li>
-    <li>Filter Noise: Adding capacitors between the VCC and GND pins of the HC-05 module can help filter out noise and provide a stable voltage.</li>
-</ul>
+        <p><b>Troubleshooting Tips:</b></p>
+        <ul>
+            <li>Check Connections: Ensure all wires are properly connected and the power supply is stable.</li>
+            <li>Use Quality Components: Avoid using thin wires or poor-quality connectors, as they can cause signal loss.</li>
+            <li>Monitor Power Supply: Use a multimeter to check the voltage and current being supplied to the HC-05 module.</li>
+            <li>Filter Noise: Adding capacitors between the VCC and GND pins of the HC-05 module can help filter out noise and provide a stable voltage.</li>
+        </ul>
 
-<p><b>Conclusion:</b></p>
-<p>By using an independent power supply for your HC-05 Bluetooth module, you can avoid the common auto-disconnect issue and ensure a stable and reliable connection for your Arduino projects. This approach addresses the root cause of inadequate power supply, which is often overlooked but crucial for maintaining a steady Bluetooth connection.</p>
+        <p><b>Conclusion:</b></p>
+        <p>By using an independent power supply for your HC-05 Bluetooth module, you can avoid the common auto-disconnect issue and ensure a stable and reliable connection for your Arduino projects. This approach addresses the root cause of inadequate power supply, which is often overlooked but crucial for maintaining a steady Bluetooth connection.</p>
 
-<p>Remember to always verify your connections and ensure that your power supply is adequate to meet the demands of your components. With these steps, you can enhance the reliability of your Bluetooth-enabled Arduino projects and enjoy seamless wireless communication.</p>
-        <!-- Add content for Blog Article 1 here -->
+        <p>Remember to always verify your connections and ensure that your power supply is adequate to meet the demands of your components. With these steps, you can enhance the reliability of your Bluetooth-enabled Arduino projects and enjoy seamless wireless communication.</p>
     </div>
 </body>
 </html>
