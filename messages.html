@@ -6,131 +6,138 @@
     <style>
         body {
             font-family: Menlo, monospace;
-    }
+        }
     </style>
     <title>messages</title>
 </head>
 <body>
     <div style="text-align: center; margin-top: 400px;">
-    <h2 id="quote"></h2>
+        <h2 id="quote"></h2>
+        <h3 id="date"></h3> 
 
-    <script>
-        // Array of 100 quotes
-        const quotes = [
-            "Every sunrise brings a new chance to rewrite your story.",
-            "The smallest step forward is still a step in the right direction.",
-            "Mistakes are proof that you're trying.",
-            "You don’t need permission to start making things happen.",
-            "Success is the sum of consistent efforts, repeated daily.",
-            "The road to achievement is paved with small victories.",
-            "Dreams don’t work unless you do.",
-            "Your future is shaped by what you do today, not tomorrow.",
-            "Opportunities are created, not found.",
-            "In the face of adversity, your strength defines you.",
-            "Growth begins where comfort ends.",
-            "Action turns dreams into reality.",
-            "The key to progress is persistence.",
-            "Your attitude determines your altitude.",
-            "Challenge yourself, and you'll discover new strengths.",
-            "Great things never come from comfort zones.",
-            "The best way to predict your future is to create it.",
-            "Focus on progress, not perfection.",
-            "What you do today echoes in your future.",
-            "The journey is just as important as the destination.",
-            "Effort is the currency of success.",
-            "You are your only limit.",
-            "Embrace change; it's the only constant.",
-            "Success is built on a foundation of discipline.",
-            "Believe in your ability to achieve greatness.",
-            "Every challenge is an opportunity in disguise.",
-            "The harder the climb, the better the view.",
-            "Your mindset shapes your reality.",
-            "Be the energy you want to attract.",
-            "Commitment turns intentions into results.",
-            "Today’s effort is tomorrow’s success.",
-            "The strength to succeed lies within you.",
-            "Consistency is the secret ingredient to achievement.",
-            "When you focus on the good, the good gets better.",
-            "Your actions today define your tomorrow.",
-            "Don’t wait for opportunities; create them.",
-            "The best investment you can make is in yourself.",
-            "Your potential is limitless when you believe in yourself.",
-            "Hard work beats talent when talent doesn’t work hard.",
-            "Your journey is unique; don’t compare it to others.",
-            "Success is the result of preparation meeting opportunity.",
-            "Be the change you want to see in your life.",
-            "Courage is the first step towards progress.",
-            "The only impossible journey is the one you never begin.",
-            "Strive for progress, not perfection.",
-            "Your dreams are waiting for you to make them a reality.",
-            "Every day is a chance to be better than you were yesterday.",
-            "Success is a journey, not a destination.",
-            "Believe in your dreams, and they will believe in you.",
-            "The key to success is to start before you're ready.",
-            "Your thoughts create your reality.",
-            "Turn your setbacks into comebacks.",
-            "Persistence is the path to achievement.",
-            "The only limit to your impact is your imagination and commitment.",
-            "Every challenge is an opportunity to learn and grow.",
-            "Success starts with self-belief.",
-            "You have the power to change your story.",
-            "Progress is made one step at a time.",
-            "Your efforts today build the foundation for tomorrow.",
-            "The first step to success is believing you can.",
-            "You are the architect of your future.",
-            "Success is a reflection of your daily habits.",
-            "Your perseverance will determine your success.",
-            "Be the driving force behind your own success.",
-            "What you do now determines what you become later.",
-            "Your goals are the compass that guides your journey.",
-            "Small actions, taken consistently, lead to big results.",
-            "Success is born from determination and hard work.",
-            "Your future is a product of your decisions today.",
-            "The journey to success is filled with lessons.",
-            "Believe in the power of your dreams.",
-            "Consistency is the key to sustained success.",
-            "The first step to any achievement is believing it's possible.",
-            "Your strength lies in your persistence.",
-            "Success is earned, not given.",
-            "Greatness is achieved through small, daily actions.",
-            "Your actions today create your tomorrow.",
-            "The only failure is not trying.",
-            "Your dreams are worth the effort.",
-            "Success is the sum of small efforts repeated day in and day out.",
-            "Your journey is shaped by the choices you make.",
-            "Perseverance is the bridge between goals and accomplishment.",
-            "Your mindset is the key to unlocking your potential.",
-            "The best way to achieve your goals is to start now.",
-            "Success is not a destination; it’s a journey of continuous growth.",
-            "Your future is in your hands.",
-            "Believe in your ability to overcome any challenge.",
-            "The foundation of success is built on hard work.",
-            "Every effort you make today builds a stronger tomorrow.",
-            "Success is a journey that begins with a single step.",
-            "Your determination will drive you to success.",
-            "Every day is an opportunity to improve.",
-            "Success is achieved through persistence and dedication.",
-            "Your actions define your future.",
-            "The road to success is paved with persistence.",
-            "Believe in yourself, and you’ll achieve your dreams.",
-            "Your journey to success starts with a single step.",
-            "Success is the result of consistent effort.",
-            "Every challenge is an opportunity to grow.",
-            "The key to your future lies in the decisions you make today."
-        ];
+        <script>
+            // Array of 100 quotes
+            const quotes = [
+                "Every sunrise brings a new chance to rewrite your story.",
+                "The smallest step forward is still a step in the right direction.",
+                "Mistakes are proof that you're trying.",
+                "You don’t need permission to start making things happen.",
+                "Success is the sum of consistent efforts, repeated daily.",
+                "The road to achievement is paved with small victories.",
+                "Dreams don’t work unless you do.",
+                "Your future is shaped by what you do today, not tomorrow.",
+                "Opportunities are created, not found.",
+                "In the face of adversity, your strength defines you.",
+                "Growth begins where comfort ends.",
+                "Action turns dreams into reality.",
+                "The key to progress is persistence.",
+                "Your attitude determines your altitude.",
+                "Challenge yourself, and you'll discover new strengths.",
+                "Great things never come from comfort zones.",
+                "The best way to predict your future is to create it.",
+                "Focus on progress, not perfection.",
+                "What you do today echoes in your future.",
+                "The journey is just as important as the destination.",
+                "Effort is the currency of success.",
+                "You are your only limit.",
+                "Embrace change; it's the only constant.",
+                "Success is built on a foundation of discipline.",
+                "Believe in your ability to achieve greatness.",
+                "Every challenge is an opportunity in disguise.",
+                "The harder the climb, the better the view.",
+                "Your mindset shapes your reality.",
+                "Be the energy you want to attract.",
+                "Commitment turns intentions into results.",
+                "Today’s effort is tomorrow’s success.",
+                "The strength to succeed lies within you.",
+                "Consistency is the secret ingredient to achievement.",
+                "When you focus on the good, the good gets better.",
+                "Your actions today define your tomorrow.",
+                "Don’t wait for opportunities; create them.",
+                "The best investment you can make is in yourself.",
+                "Your potential is limitless when you believe in yourself.",
+                "Hard work beats talent when talent doesn’t work hard.",
+                "Your journey is unique; don’t compare it to others.",
+                "Success is the result of preparation meeting opportunity.",
+                "Be the change you want to see in your life.",
+                "Courage is the first step towards progress.",
+                "The only impossible journey is the one you never begin.",
+                "Strive for progress, not perfection.",
+                "Your dreams are waiting for you to make them a reality.",
+                "Every day is a chance to be better than you were yesterday.",
+                "Success is a journey, not a destination.",
+                "Believe in your dreams, and they will believe in you.",
+                "The key to success is to start before you're ready.",
+                "Your thoughts create your reality.",
+                "Turn your setbacks into comebacks.",
+                "Persistence is the path to achievement.",
+                "The only limit to your impact is your imagination and commitment.",
+                "Every challenge is an opportunity to learn and grow.",
+                "Success starts with self-belief.",
+                "You have the power to change your story.",
+                "Progress is made one step at a time.",
+                "Your efforts today build the foundation for tomorrow.",
+                "The first step to success is believing you can.",
+                "You are the architect of your future.",
+                "Success is a reflection of your daily habits.",
+                "Your perseverance will determine your success.",
+                "Be the driving force behind your own success.",
+                "What you do now determines what you become later.",
+                "Your goals are the compass that guides your journey.",
+                "Small actions, taken consistently, lead to big results.",
+                "Success is born from determination and hard work.",
+                "Your future is a product of your decisions today.",
+                "The journey to success is filled with lessons.",
+                "Believe in the power of your dreams.",
+                "Consistency is the key to sustained success.",
+                "The first step to any achievement is believing it's possible.",
+                "Your strength lies in your persistence.",
+                "Success is earned, not given.",
+                "Greatness is achieved through small, daily actions.",
+                "Your actions today create your tomorrow.",
+                "The only failure is not trying.",
+                "Your dreams are worth the effort.",
+                "Success is the sum of small efforts repeated day in and day out.",
+                "Your journey is shaped by the choices you make.",
+                "Perseverance is the bridge between goals and accomplishment.",
+                "Your mindset is the key to unlocking your potential.",
+                "The best way to achieve your goals is to start now.",
+                "Success is not a destination; it’s a journey of continuous growth.",
+                "Your future is in your hands.",
+                "Believe in your ability to overcome any challenge.",
+                "The foundation of success is built on hard work.",
+                "Every effort you make today builds a stronger tomorrow.",
+                "Success is a journey that begins with a single step.",
+                "Your determination will drive you to success.",
+                "Every day is an opportunity to improve.",
+                "Success is achieved through persistence and dedication.",
+                "Your actions define your future.",
+                "The road to success is paved with persistence.",
+                "Believe in yourself, and you’ll achieve your dreams.",
+                "Your journey to success starts with a single step.",
+                "Success is the result of consistent effort.",
+                "Every challenge is an opportunity to grow.",
+                "The key to your future lies in the decisions you make today."
+            ];
 
-        // Get today's date
-        const today = new Date();
-        
-        // Use the current day of the year as the index for the quote
-        const startOfYear = new Date(today.getFullYear(), 0, 1);
-        const dayOfYear = Math.floor((today - startOfYear) / (1000 * 60 * 60 * 24));
+            // Get today's date
+            const today = new Date();
+            
+            // Use the current day of the year as the index for the quote
+            const startOfYear = new Date(today.getFullYear(), 0, 1);
+            const dayOfYear = Math.floor((today - startOfYear) / (1000 * 60 * 60 * 24));
 
-        // Calculate the index of the quote to display
-        const quoteIndex = dayOfYear % quotes.length;
+            // Calculate the index of the quote to display
+            const quoteIndex = dayOfYear % quotes.length;
 
-        // Display the quote
-        document.getElementById("quote").innerText = quotes[quoteIndex];
-    </script>
+            // Display the quote
+            document.getElementById("quote").innerText = quotes[quoteIndex];
+
+            // Format the date and display it
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString(undefined, options);
+            document.getElementById("date").innerText = formattedDate;
+        </script>
+    </div>
 </body>
 </html>
