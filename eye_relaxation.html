@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Relaxation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            transition: background-color 3s ease;
+        }
+
+        .content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Eye Relaxation</h1>
+        <p>Relax and enjoy the color transitions!</p>
+    </div>
+
+    <script>
+        // Array of 10 colors to cycle through
+        const colors = [
+            "#FF5733", // Red-orange
+            "#33FF57", // Green
+            "#3357FF", // Blue
+            "#FF33A6", // Pink
+            "#FFBD33", // Yellow-orange
+            "#33FFF9", // Cyan
+            "#8D33FF", // Purple
+            "#FF3380", // Light red
+            "#33FFB5", // Light green
+            "#FFC433"  // Gold
+        ];
+
+        let currentColorIndex = 0;
+
+        function changeBackgroundColor() {
+            // Set the next color
+            document.body.style.backgroundColor = colors[currentColorIndex];
+            
+            // Update the color index, cycling back to 0 after reaching the end
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        // Initial color set
+        changeBackgroundColor();
+
+        // Change color every 3 seconds (3000 ms)
+        setInterval(changeBackgroundColor, 3000);
+    </script>
+</body>
+</html>
