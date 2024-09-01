@@ -14,6 +14,8 @@
     <div style="text-align: center; margin-top: 400px;">
         <h2 id="quote"></h2>
         <h3 id="date"></h3> 
+        <h4 id="visitCount"></h4> <!-- Element to display the visit count -->
+
 
         <script>
             // Array of 100 quotes
@@ -120,7 +122,6 @@
                 "The key to your future lies in the decisions you make today."
             ];
 
-            // Get today's date
             const today = new Date();
             
             // Use the current day of the year as the index for the quote
@@ -137,6 +138,16 @@
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             const formattedDate = today.toLocaleDateString(undefined, options);
             document.getElementById("date").innerText = formattedDate;
+
+            // Visit counter logic
+            if (localStorage.getItem('pageVisits')) {
+                localStorage.setItem('pageVisits', parseInt(localStorage.getItem('pageVisits')) + 1);
+            } else {
+                localStorage.setItem('pageVisits', 1);
+            }
+
+            // Display the visit count
+            document.getElementById("visitCount").innerText = "This page has been visited " + localStorage.getItem('pageVisits') + " times.";
         </script>
     </div>
 </body>
