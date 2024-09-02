@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Strobe</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            transition: background-color 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to flash the screen
+        function flashScreen(duration) {
+            document.body.style.backgroundColor = 'white';
+            setTimeout(() => {
+                document.body.style.backgroundColor = 'black';
+            }, duration);
+        }
+
+        // Function to execute SOS Morse code flash pattern
+        function sosFlashPattern() {
+            const flashSequence = [
+                { flashes: 3, duration: 100 }, // SOS pattern: 3 short flashes
+                { flashes: 3, duration: 300 }, // SOS pattern: 3 medium flashes
+                { flashes: 3, duration: 100 }, // SOS pattern: 3 short flashes
+            ];
+
+            let index = 0;
+            
+            function nextPattern() {
+                if (index >= flashSequence.length) {
+                    index = 0; // Restart pattern
+                    setTimeout(nextPattern, 1000); // Pause for 1 second
+                    return;
+                }
+
+                const { flashes, duration } = flashSequence[index];
+                let flashCount = 0;
+
+                function flash() {
+                    if (flashCount >= flashes) {
+                        index++;
+                        setTimeout(nextPattern, 0); // Move to next pattern
+                        return;
+                    }
+                    
+                    flashScreen(duration);
+                    flashCount++;
+                    setTimeout(flash, duration * 2); // Flash on and off
+                }
+
+                flash();
+            }
+
+            nextPattern();
+        }
+
+        // Start the SOS flash pattern when the page loads
+        window.onload = sosFlashPattern;
+    </script>
+</body>
+</html>
