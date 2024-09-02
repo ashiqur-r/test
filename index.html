@@ -9,21 +9,6 @@
             font-family: Menlo, monospace;
             margin: 0;
             padding: 0;
-            position: relative;
-            z-index: 0;
-        }
-
-        /* Background gradient and blur effect */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to right, #f0f4f8, #ffffff); /* Light blue to white gradient */
-            filter: blur(8px);
-            z-index: -1;
         }
 
         .centered {
@@ -55,6 +40,7 @@
             padding: 10px;
         }
 
+        /* New CSS class for the top left corner icon */
         .top-left-icon {
             position: absolute;
             top: 10px;
@@ -62,12 +48,13 @@
         }
 
         .top-left-icon img {
-            width: 40px;
+            width: 40px; /* Adjust size as needed */
             height: 40px;
         }
     </style>
 </head>
 <body>
+    <!-- New Home Icon in the Top Left Corner -->
     <div class="top-left-icon">
         <a href="index.html">
             <img src="home.png" alt="Home" width="50" height="45">
@@ -77,10 +64,12 @@
     <div class="date" id="date"></div>
 
     <div class="centered">
+        <!-- Centered Logo -->
         <img src="logo.png" alt="Logo" width="200" height="200">
     </div>
 
     <div class="centered button-row" style="margin-top: 50px;">
+        <!-- Row of Buttons -->
         <a href="blogs.html">
             <img src="icon1.png" alt="blogs" width="45" height="45">
             <br>
@@ -99,6 +88,7 @@
             resume
         </a>
 
+        <!-- New Button for Eye Relaxation -->
         <a href="dead_pixel.html">
             <img src="icon4.png" alt="dead pixel" width="45" height="45">
             <br>
@@ -107,13 +97,15 @@
     </div>
 
     <script>
+        // Function to format date as dd-mm-yyyy
         function formatDate(date) {
             let day = String(date.getDate()).padStart(2, '0');
-            let month = String(date.getMonth() + 1).padStart(2, '0');
+            let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
             let year = date.getFullYear();
-            return `${day}-${month}-${year}`;
+            return ${day}-${month}-${year};
         }
 
+        // Set the date in the div
         document.getElementById('date').textContent = formatDate(new Date());
     </script>
 </body>
