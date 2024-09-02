@@ -11,6 +11,7 @@
             font-family: Menlo, monospace;
             margin: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh; /* Full height of the viewport */
@@ -19,10 +20,31 @@
         .sos-text {
             font-size: 200px; /* Adjust size as needed */
             font-weight: bold;
+            margin-bottom: 20px; /* Space between text and button */
+        }
+
+        .strobe-button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: Menlo, monospace;
+            border-radius: 5px;
+        }
+
+        .strobe-button:hover {
+            background-color: gray;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="sos-text">SOS</div>
+    <a href="sos_strobe.html" class="strobe-button">Go to SOS Strobe</a>
 </body>
 </html>
