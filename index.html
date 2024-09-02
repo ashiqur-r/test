@@ -9,12 +9,23 @@
             font-family: Menlo, monospace;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #6a11cb, #2575fc); /* Classy gradient colors */
-            filter: blur(8px); /* Apply blur effect */
-            -webkit-filter: blur(8px); /* For Safari */
+            position: relative;
+            z-index: 0;
         }
 
-        /* Rest of your CSS */
+        /* Background gradient and blur effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, #f0f4f8, #ffffff); /* Light blue to white gradient */
+            filter: blur(8px);
+            z-index: -1;
+        }
+
         .centered {
             text-align: center;
         }
