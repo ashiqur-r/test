@@ -26,9 +26,11 @@
         // Function to execute SOS Morse code flash pattern
         function sosFlashPattern() {
             const flashSequence = [
-                { flashes: 3, duration: 100 }, // SOS pattern: 3 short flashes
-                { flashes: 3, duration: 300 }, // SOS pattern: 3 medium flashes
-                { flashes: 3, duration: 100 }, // SOS pattern: 3 short flashes
+                { flashes: 3, duration: 100 }, // 3 short flashes (S)
+                { flashes: 1, duration: 300 }, // Space between S and O
+                { flashes: 3, duration: 300 }, // 3 long flashes (O)
+                { flashes: 1, duration: 300 }, // Space between O and S
+                { flashes: 3, duration: 100 }  // 3 short flashes (S)
             ];
 
             let index = 0;
@@ -46,7 +48,7 @@
                 function flash() {
                     if (flashCount >= flashes) {
                         index++;
-                        setTimeout(nextPattern, 0); // Move to next pattern
+                        setTimeout(nextPattern, duration); // Move to next pattern
                         return;
                     }
                     
