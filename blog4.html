@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Understanding RFID Tags in Inventory Management</title>
+    <style>
+        body {
+            font-family: Menlo, monospace;
+        }
+        .content {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .code {
+            text-align: left;
+            white-space: pre;
+            margin: 0;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 2em;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        h3 {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .top-left-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- New Home Icon in the Top Left Corner -->
+    <div class="top-left-icon">
+        <a href="index.html">
+            <img src="home.png" alt="Home" width="50" height="45">
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>Understanding RFID Tags in Inventory Management</h1>
+
+        <h2>What is RFID?</h2>
+        <p>
+            RFID (Radio Frequency Identification) is an electronic chip used to store a small amount of data. There are two types of RFID tags:
+        </p>
+        <ul>
+            <li><strong>Active RFID Tag</strong></li>
+            <li><strong>Passive RFID Tag</strong></li>
+        </ul>
+
+        <h2>Passive RFID Tags</h2>
+        <p>
+            Passive RFID tags can store from 64 bits to 1 Kbyte of data, known as an EPC (Electronic Product Code). The EPC is a unique set of numbers used to differentiate products across different categories.
+        </p>
+
+        <h2>How Does the RFID System Work?</h2>
+        <p>
+            RFID tags are composed of three major parts:
+        </p>
+        <ul>
+            <li>Microchip</li>
+            <li>Radio Transponder (Tx)</li>
+            <li>Radio Receiver (Rx)</li>
+        </ul>
+        <p>
+            The system gets triggered when the tag comes into proximity with an electromagnetic field of a specific frequency. This activates the microchip, which then sends the EPC or other stored data to the RFID reader.
+        </p>
+
+        <h2>Advantages of RFID Tags Over Traditional Barcode Systems</h2>
+        <p>
+            RFID tags have several advantages over traditional barcode or QR code systems:
+        </p>
+        <ul>
+            <li><strong>Longer Reading Range:</strong> RFID tags can be read from a few feet away, whereas barcodes must be scanned directly.</li>
+            <li><strong>Faster Processing:</strong> Multiple RFID tags can be read simultaneously, significantly reducing processing time compared to scanning each barcode individually.</li>
+        </ul>
+
+        <h2>RFID in Clothing Stores</h2>
+        <p>
+            In clothing stores, each product (e.g., t-shirts, bags) is tagged with a unique RFID tag. This allows for easy inventory management, as the software can track the number of available items, sales, and stock across multiple outlets.
+        </p>
+        <p>
+            <strong>Tracking and Inventory Management:</strong> RFID enables accurate tracking of products, whether they are in storage or on the sales floor. The system can quickly count or sort items, making inventory management more efficient.
+        </p>
+        <p>
+            <strong>Preventing Theft:</strong> When a sale is completed, the EPC serial number is disabled. If an item with an active RFID tag is taken out of the store without purchase, alarms will trigger.
+        </p>
+
+        <h2>Other Applications of RFID Tags</h2>
+        <p>
+            RFID tags are also used in various other applications, including:
+        </p>
+        <ul>
+            <li>ID cards and access cards</li>
+            <li>Passports</li>
+            <li>License or registration plates</li>
+            <li>Vehicle tracking</li>
+            <li>Industrial automation processes</li>
+        </ul>
+
+        <h2>Vulnerabilities of RFID Tags</h2>
+        <p>
+            Despite their advantages, RFID tags have vulnerabilities. For instance, hackers can clone the unique number stored inside the tag, leading to potential security issues.
+        </p>
+    </div>
+</body>
+</html>
